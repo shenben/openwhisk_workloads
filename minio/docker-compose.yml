@@ -8,9 +8,9 @@ minio:
     - server
     - /data
   environment:
-    - MINIO_ACCESS_KEY=5VCTEQOQ0GR0NV1T67GN
-    - MINIO_SECRET_KEY=8MBK5aJTR330V1sohz4n1i7W5Wv/jzahARNHUzi3
+    - MINIO_ACCESS_KEY=zFE3frmjIeGtC-f_aimhUkn9ARiIm2HrkM1haFV4Mqw
+    - MINIO_SECRET_KEY=756c222f96e27b3c85e8e703cf206fa900dce3e55ef32516bbed18136dbca23a
   volumes:
-    - ~/tmp/openwhisk/minio:/data:rw
+    - /data:/data:rw
   ports:
-    - "9002:9000"
+    - "9000:9011"

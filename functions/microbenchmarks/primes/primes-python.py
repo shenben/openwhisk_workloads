@@ -10,7 +10,7 @@ def main(params):
     """
     standard optimized sieve algorithm to get a list of prime numbers
     """
-    n = 10000000
+    n = int(params['N'])
 
     if n < 2:
         return {'Number of primes found': 0}
@@ -37,3 +37,4 @@ def main(params):
         m = 2 * i + 3
     res = [2] + [x for x in s if x]
     return {'Number of primes found': len(res)}
+# print(main({'N':90}))
