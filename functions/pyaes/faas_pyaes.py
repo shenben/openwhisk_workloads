@@ -32,3 +32,9 @@ def main(params):
     ret_val['latency'] = latency
 
     return ret_val
+
+# tp={
+#     "length":10,
+#     "iteration":10
+# }
+# print(main(tp))

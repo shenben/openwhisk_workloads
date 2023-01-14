@@ -17,3 +17,4 @@ def main(params):
     ret_val = {}
     ret_val['latency'] = latency
     return ret_val
+#print(main({'N':10}))

@@ -44,41 +44,43 @@ def create_api():
     cmd = 'wsk action create float_op float_operation.py --web true -i'
     subprocess.call(cmd, shell=True)
 
-    cmd = 'wsk api create /wsk_exp /float_op get float_op --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /float_op get float_op --response-type json  -i '
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /float_op post float_op --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /float_op post float_op --response-type json  -i '
     subprocess.call(cmd, shell=True)
 
     os.chdir(str(top_dir / 'microbenchmarks'/'base64'))
-    cmd = 'wsk action create base64 base64-python.py --web true -i'
+    cmd = 'wsk action create base64 base64-python.py --web true -i -c 500'
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /base64 get base64 --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /base64 get base64 --response-type json  -i '
+    # cmd ="wsk api create /wsk_exp /base64 get base64 --response-type json --apigw-access-token true --apigw-access-token-secret mysecret --apigw-access-token-expiry 3600 --apigw-limit-rate-per-min 10000"
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /base64 post base64 --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /base64 post base64 --response-type json  -i '
+    # cmd ="wsk api create /wsk_exp /base64 post base64 --response-type json --apigw-access-token true --apigw-access-token-secret mysecret --apigw-access-token-expiry 3600 --apigw-limit-rate-per-min 10000"
     subprocess.call(cmd, shell=True)
     
     os.chdir(str(top_dir / 'microbenchmarks'/'json'))
     cmd = 'wsk action create json json-python.py --web true -i'
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /json get json --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /json get json --response-type json  -i '
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /json post json --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /json post json --response-type json  -i '
     subprocess.call(cmd, shell=True)
     
     os.chdir(str(top_dir / 'microbenchmarks'/'http-endpoint'))
     cmd = 'wsk action create http-endpoint http-endpoint-python.py --web true -i'
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /http-endpoint get http-endpoint --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /http-endpoint get http-endpoint --response-type json  -i '
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /http-endpoint post http-endpoint --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /http-endpoint post http-endpoint --response-type json  -i '
     subprocess.call(cmd, shell=True)
     
     os.chdir(str(top_dir / 'microbenchmarks'/'primes'))
     cmd = 'wsk action create primes primes-python.py --web true -i'
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /primes get primes --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /primes get primes --response-type json  -i '
     subprocess.call(cmd, shell=True)
-    cmd = 'wsk api create /wsk_exp /primes post primes --response-type json -i'
+    cmd = 'wsk api create /wsk_exp /primes post primes --response-type json  -i '
     subprocess.call(cmd, shell=True)
     
 def remove_api():

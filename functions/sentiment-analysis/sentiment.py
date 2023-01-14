@@ -2,8 +2,9 @@
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
-
-import sys
+# import nltk
+import nltk
+nltk.download('punkt')
 import json
 from textblob import TextBlob
 
@@ -22,3 +23,8 @@ def main(params):
     retVal["sentences"] = sentences
 
     return retVal
+
+# s ={
+#     'analyse':'cool'
+# }
+# print(main(s))

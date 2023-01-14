@@ -41,3 +41,13 @@ def main(params):
                        file_path=image_path)
      
     return predict(image_path)
+
+# tp={
+#     "endpoint": "s3.ap-east-1.amazonaws.com",
+#     "access_key": "AKIA3VGEFMSCA6L6AEXA",
+#     "secret_key": "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",
+#     "bucket": "bucket656056549",
+#     "video": "720.avi",
+#     "image": "drone.png"
+# }
+# print(main(tp))
